@@ -1,4 +1,4 @@
-function Radio_Button(){
+export default function Radio_Button(){
 
     return(
         
@@ -28,5 +28,3 @@ function Radio_Button(){
         
     );
 }
-
-export default Radio_Button
