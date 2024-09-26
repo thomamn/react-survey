@@ -1,7 +1,4 @@
-import handleColorChange from "./Form"
-import formData from "./Form"
-
-export default function Radio_Button(){
+export default function Radio_Button(selectedColor, handleColorChange){
 
     return(
         
@@ -9,7 +6,7 @@ export default function Radio_Button(){
         <ul>
             <li>
                 <input id="color-one" type="radio" name="color" value="red" 
-                checked={formData.colour === "red"}
+                checked={selectedColor === "red"}
                 onChange={handleColorChange}
                 /><label
                 htmlFor="color-one"
@@ -17,7 +14,7 @@ export default function Radio_Button(){
             </li>
             <li>
                 <input id="color-two" type="radio" name="color" value="blue" 
-                checked={formData.colour === "blue"}
+                checked={selectedColor === "blue"}
                 onChange={handleColorChange}
                 /><label
                 htmlFor="color-two"
@@ -25,7 +22,7 @@ export default function Radio_Button(){
             </li>
             <li>
                 <input id="color-three" type="radio" name="color" value="yellow" 
-                checked={formData.colour === "yellow"}
+                checked={selectedColor === "yellow"}
                 onChange={handleColorChange}
                 /><label
                 htmlFor="color-three"
@@ -33,7 +30,7 @@ export default function Radio_Button(){
             </li>
             <li>
                 <input id="color-four" type="radio" name="color" value="black" 
-                checked={formData.colour === "black"}
+                checked={selectedColor === "black"}
                 onChange={handleColorChange}
                 /><label
                 htmlFor="color-four"

@@ -12,7 +12,7 @@ function Form() {
 
     const [formData, setFormData] = useState({
         username: "",
-        colour: "",
+        color: "",
         timeSpent: [],
         review: "",
       }); 
@@ -37,7 +37,7 @@ function Form() {
             <h2>Tell us what you think about your rubber duck!</h2>
             <div className="form__group radio">
                 <h3>How do you rate your rubber duck colour?</h3>
-                <Radio_Button/>
+                <Radio_Button selectedColor={formData.color} handleColorChange={handleColorChange}/>
             </div>
             <div className="form__group">
                 <h3>How do you like to spend time with your rubber duck</h3>
