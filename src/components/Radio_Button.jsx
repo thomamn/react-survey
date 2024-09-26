@@ -1,3 +1,6 @@
+import handleColorChange from "./Form"
+import formData from "./Form"
+
 export default function Radio_Button(){
 
     return(
@@ -5,24 +8,36 @@ export default function Radio_Button(){
 
         <ul>
             <li>
-                <input id="color-one" type="radio" name="color" value="1" /><label
-                for="color-one"
-                >1</label>
+                <input id="color-one" type="radio" name="color" value="red" 
+                checked={formData.colour === "red"}
+                onChange={handleColorChange}
+                /><label
+                htmlFor="color-one"
+                >Red</label>
             </li>
             <li>
-                <input id="color-two" type="radio" name="color" value="2" /><label
-                for="color-two"
-                >2</label>
+                <input id="color-two" type="radio" name="color" value="blue" 
+                checked={formData.colour === "blue"}
+                onChange={handleColorChange}
+                /><label
+                htmlFor="color-two"
+                >Blue</label>
             </li>
             <li>
-                <input id="color-three" type="radio" name="color" value="3" /><label
-                for="color-three"
-                >3</label>
+                <input id="color-three" type="radio" name="color" value="yellow" 
+                checked={formData.colour === "yellow"}
+                onChange={handleColorChange}
+                /><label
+                htmlFor="color-three"
+                >Yellow</label>
             </li>
             <li>
-                <input id="color-four" type="radio" name="color" value="4" /><label
-                for="color-four"
-                >4</label>
+                <input id="color-four" type="radio" name="color" value="black" 
+                checked={formData.colour === "black"}
+                onChange={handleColorChange}
+                /><label
+                htmlFor="color-four"
+                >Black</label>
             </li>
         </ul>
         

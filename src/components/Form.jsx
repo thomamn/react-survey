@@ -1,7 +1,36 @@
 import Radio_Button from "./Radio_Button";
 import Checkboxes from "./Checkboxes";
+import { useState } from "react";
+
 function Form() {
 
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [color, setColor] = useState("");
+    const [review, setReview] = useState("");
+    const [answers, setAnswers] = useState([])
+
+    const [formData, setFormData] = useState({
+        username: "",
+        colour: "",
+        timeSpent: [],
+        review: "",
+      }); 
+
+    const handleTimeSpentChange = (e) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => ({
+        ...prev,
+        timeSpent: checked
+        ? [...prev.timeSpent, value]
+        : prev.timeSpent.filter((item) => item !== value),
+    }));
+    };
+
+    const handleColorChange = (e) => setFormData({ ...formData, colour: e.target.value });
+
+    
+    
 
     return (
         <form className="form">
@@ -26,14 +55,16 @@ function Form() {
                 type="text"
                 name="username"
                 value="" />
+                onChange={(e) => setUsername(e.target.value)}
             </label>
             <label
                 >Leave us your email pretty please??<input
                 type="email"
                 name="email"
                 value="" />
+                onChange={(e) => setEmail(e.target.value)} 
             </label>
-            <input className="form__submit" type="submit" value="Submit Survey!" />
+            <input className="form__submit" type="submit" value="Submit Survey!" onClick={() => setAnswers([username, email])}/>
         </form>
       )
 }
