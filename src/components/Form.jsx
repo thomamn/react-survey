@@ -1,18 +1,18 @@
-import Radio_Button from "./Radio_Buttons";
+import Radio_Button from "./Radio_Button";
 import Checkboxes from "./Checkboxes";
 function Form() {
 
 
     return (
-        <form class="form">
+        <form className="form">
             <h2>Tell us what you think about your rubber duck!</h2>
-            <div class="form__group radio">
+            <div className="form__group radio">
                 <h3>How do you rate your rubber duck colour?</h3>
-                <input/>
+                <Radio_Button/>
             </div>
-            <div class="form__group">
+            <div className="form__group">
                 <h3>How do you like to spend time with your rubber duck</h3>
-                <checkboxes />
+                <Checkboxes />
             </div>
             <label
                 >What else have you got to say about your rubber duck?<textarea
@@ -33,7 +33,7 @@ function Form() {
                 name="email"
                 value="" />
             </label>
-            <input class="form__submit" type="submit" value="Submit Survey!" />
+            <input className="form__submit" type="submit" value="Submit Survey!" />
         </form>
       )
 }

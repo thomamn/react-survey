@@ -11,7 +11,7 @@ function Survey() {
         <h2>Answers list</h2>
         {}
       </section>
-      <section className="survey__form">{Form}</section>
+      <section className="survey__form"><Form/></section>
     </main>
   );
 }
