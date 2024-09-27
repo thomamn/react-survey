@@ -1,4 +1,4 @@
-export default function Radio_Button(selectedColor, handleColorChange){
+export default function Radio_Button({ selectedColor, handleColorChange}){
 
     return(
         

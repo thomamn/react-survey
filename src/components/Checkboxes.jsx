@@ -2,10 +2,8 @@
 import handleTimeSpentChange from "./Form"
 import formData from "./Form"
 
-export default function Checkboxes(){
+export default function Checkboxes({ timeSpent, handleTimeSpentChange}){
 
-    
-      
       
     return (
         <ul>
@@ -15,15 +13,17 @@ export default function Checkboxes(){
                     name="spend-time"
                     type="checkbox"
                     value="swimming"
-                    //checked={formData.timeSpent.push("swimming")}
-                    //onChange={handleTimeSpentChange}
+                    
+                    onChange={handleTimeSpentChange}
+                    //checked//={timeSpent==="swimming"}
                 />Swimming</label>
             </li>
             <li>
                 <label
                 ><input name="spend-time" type="checkbox" value="bathing" 
-                //checked={formData.rmtimeSpent.push("bathing")}
-                //onChange={handleTimeSpentChange}
+                
+                onChange={handleTimeSpentChange}
+                //checked//={timeSpent==="bathing"}
                 />Bathing</label>
             </li>
             <li>
@@ -32,15 +32,17 @@ export default function Checkboxes(){
                     name="spend-time"
                     type="checkbox"
                     value="chatting"
-                    //checked={formData.rmtimeSpent.push("chatting")}
-                    //onChange={handleTimeSpentChange}
+                    
+                    onChange={handleTimeSpentChange}
+                    //checked//={timeSpent==="chatting"}
                 />Chatting</label>
             </li>
             <li>
                 <label
                 ><input name="spend-time" type="checkbox" value="noTime" 
-                //checked={formData.rmtimeSpent.push("noTime")}
-                //onChange={handleTimeSpentChange}
+                
+                onChange={handleTimeSpentChange}
+                //checked//={timeSpent==="noTime"}
                 />I dont like to
                 spend time with it</label>
             </li>
