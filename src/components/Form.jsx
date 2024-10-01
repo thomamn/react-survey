@@ -56,8 +56,8 @@ function Form() {
                 >Put your name here (if you feel like it):<input
                 type="text"
                 name="username"
-                value="" 
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                value={formData.username}
+                onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                 />
                 
             </label>
@@ -65,7 +65,7 @@ function Form() {
                 >Leave us your email pretty please??<input
                 type="email"
                 name="email"
-                value="" 
+                value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
                 
